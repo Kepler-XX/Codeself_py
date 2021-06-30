@@ -139,55 +139,55 @@ class Config(object):
     QYVX_CORPSECRET = "-acoTrmlEIiwXm7HVuQMcex_nvrqWBJnq1SFOik48Fw"
     QYVX_AGENTID = 1000008
     NA_AGENTID = 1171396979
-    ES_HOSTS = [{'host': '192.168.8.218', 'port': '9200'}, {'host': '192.168.8.150', 'port': '9200'}, {'host': '192.168.8.154', 'port': '9200'}]
+    ES_HOSTS = {'host': '127.0.0.1', 'port': '9200'}
     ES_LOG_INDEXS = 'logging-*'
     COMMON_AUTH = "Jpc3MiOiJkZXZvcHMiLCJpYXQiOjE1OTgzNjk0MzAsImV4cCI"
     DOCUMENT_ATTACHMENT_SAVE_PATH = '/netdisk/'
 
 
 class DevConfig(Config):
-    DATABASE_HOST = '192.168.140.215'
+    DATABASE_HOST = '127.0.0.1'
     DATABASE_PORT = 3306
     DATABASE_USER = 'root'
     DATABASE_PASSWORD = '111111'
-    DATABASE_DB = 'career_devops'
+    DATABASE_DB = 'kepler'
     DATABASE_CHARSET = 'utf8'
-    REDIS_HOST = '192.168.140.215'
+    REDIS_HOST = '127.0.0.1'
     REDIS_PORT = 6379
     REDIS_DB = 14
     REDIS_PASSWORD = 'pass'
-    RADISH_URL = 'http://114.116.126.117:9001/radish-devops/api/'
-    MONITOR_URL = 'http://114.115.221.21:8080'
+    RADISH_URL = 'http://127.0.0.1:9001/kepler/api/'
+    MONITOR_URL = 'http://127.0.0.1:8080'
 
 
 class TestConfig(Config):
-    DATABASE_HOST = '192.168.0.156'
+    DATABASE_HOST = '127.0.0.1'
     DATABASE_PORT = 3306
-    DATABASE_USER = 'yinyan'
-    DATABASE_PASSWORD = 'JvuIRpTHf3P!wjuA'
-    DATABASE_DB = 'career_devops'
+    DATABASE_USER = 'kepler'
+    DATABASE_PASSWORD = '123456'
+    DATABASE_DB = 'kepler'
     DATABASE_CHARSET = 'utf8'
-    REDIS_HOST = '192.168.0.94'
+    REDIS_HOST = '127.0.0.1'
     REDIS_PORT = 6379
     REDIS_DB = 12
-    REDIS_PASSWORD = '3aa0@0c2c0a228D0'
-    RADISH_URL = 'http://114.116.126.117:9001/radish-devops/api/'
-    MONITOR_URL = 'http://114.115.221.21:8080'
+    REDIS_PASSWORD = '123456'
+    RADISH_URL = 'http://127.0.0.1:9001/kepler/api/'
+    MONITOR_URL = 'http://127.0.0.1:8080'
 
 
 class ProdConfig(Config):
-    DATABASE_HOST = '192.168.8.130'
+    DATABASE_HOST = '127.0.0.1'
     DATABASE_PORT = 3306
-    DATABASE_USER = 'devops'
-    DATABASE_PASSWORD = 'ae6@b1c8ee6fA056'
-    DATABASE_DB = 'devops'
+    DATABASE_USER = 'kepler'
+    DATABASE_PASSWORD = '123456'
+    DATABASE_DB = 'kepler'
     DATABASE_CHARSET = 'utf8'
-    REDIS_HOST = 'redis-2c19723-redis-datatomic-prod.dcs.huaweicloud.com'
+    REDIS_HOST = '127.0.0.1'
     REDIS_PORT = 6379
     REDIS_DB = 7
-    REDIS_PASSWORD = 'nGxX_j8K'
-    RADISH_URL = 'http://114.116.126.117:9001/radish-devops/api/'
-    MONITOR_URL = 'http://114.115.221.21:8080'
+    REDIS_PASSWORD = '123456'
+    RADISH_URL = 'http://127.0.0.1:9001/kepler/api/'
+    MONITOR_URL = 'http://127.0.0.1:8080'
 
 
 configs = {
