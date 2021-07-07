@@ -1,10 +1,6 @@
-from db import config
-from pymongo import MongoClient
+from kepler.db.db import get_mongodb
 
-conn = MongoClient(host=config.MONGODB_HOST, port=config.MONGODB_PORT)
-db = conn.kepler  # 创建数据库，如不存在，则自动创建
-mon = db.user    # 创建集合，若不存在，则自动创建
-
+mon = get_mongodb()
 
 # 插入数据
 """
@@ -73,5 +69,5 @@ mon.update_one({"name":"zhangsan"},{
 
 
 # 聚合操作
-if __name__ == '__main__':
-    print(mon)
+# if __name__ == '__main__':
+#     print(mon)

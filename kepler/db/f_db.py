@@ -1,6 +1,6 @@
 from pymysql import cursors
 
-from db.db import get_db
+from kepler.db.db import get_db
 
 # 导入get_db方法
 db = get_db()
