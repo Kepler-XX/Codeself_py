@@ -1,6 +1,5 @@
 import pymysql
-import redis
-from . import config
+from Codeself_py.db import config
 
 from flask import g
 
