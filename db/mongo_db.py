@@ -1,4 +1,4 @@
-from Codeself_py.db import config
+from db import config
 from pymongo import MongoClient
 
 conn = MongoClient(host=config.MONGODB_HOST, port=config.MONGODB_PORT)
@@ -49,11 +49,11 @@ mon.insert_many(user_l)
 
 # 查询数据
 
-# nm = mon.estimated_document_count()  # 该表数据总数
-#
-# mongo_list = mon.find() # 可增加筛选条件
-# for i in mongo_list:
-#     print(i)
+nm = mon.estimated_document_count()  # 该表数据总数
+
+mongo_list = mon.find() # 可增加筛选条件
+for i in mongo_list:
+    print(i)
 
 
 # 更新数据

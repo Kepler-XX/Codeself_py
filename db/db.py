@@ -1,5 +1,5 @@
 import pymysql
-from Codeself_py.db import config
+from db import config
 
 from flask import g
 
