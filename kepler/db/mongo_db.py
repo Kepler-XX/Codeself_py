@@ -10,7 +10,17 @@ user = {"name": "kepler",
         "remark": "...for my remark"}
 mon.insert_one(user)
 """
+user = {"name": "kepler",
+        "age": 20,
+        "info": "kepler",
+        "remark": "...for my remark"}
 
+user1 = {"name": "kepler",
+        "age": 20,
+        "info": "kepler",
+        "remark": "...for my remark",
+        "a":"sdds"}
+mon.insert_one(user1)
 # 插入多条数据
 """
 user_l = [{
@@ -34,6 +44,8 @@ user_l = [{
 ]
 mon.insert_many(user_l)
 """
+
+# mon.insert_many(user)
 ### insert()方法，若新增数据的主键已存在，则会抛出org.springframework.dao.DuplicateKeyException 异常提示主键重复，不保存当前数据。
 ### 插入数据还有sava()方法，它自身提供插入和更新操作，需要看传入的是什么值
     # 1. 参数不带_id

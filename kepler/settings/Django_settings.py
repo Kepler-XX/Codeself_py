@@ -14,7 +14,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import json
 import logging
 import os
-import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -115,11 +114,6 @@ LOG_HANDLERS = ['syslog']
 
 if DEBUG:
     LOG_HANDLERS = ['console']
-
-# TODO 待解决json格式
-# '[%(asctime)s] %(levelname)s %(pathname)s %(lineno)d  %(message)s  "URI":%(uri)s-"RET":%(ret)s-"REQUESTID":%(requestId)s'
-import pythonjsonlogger.jsonlogger
-# extra = "%(data)s" if "data"  else None
 
 json_format = {
     "time": "%(asctime)s",
