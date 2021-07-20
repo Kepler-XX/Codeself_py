@@ -57,3 +57,33 @@ def delete_db(id):
     else:
         db.commit()
         return True
+
+
+
+def get_all():
+    # get
+    cursor = db.cursor(cursor=cursors.DictCursor)
+    cursor.execute("select * from person where id=%s", id)
+    # cursor.execute("select * from person")
+    person_info = cursor.fetchall()
+    # person_list = cursor.fetchall()
+    return person_info
+
+
+
+
+params = get_all()
+def insert_all(params):
+    # insert
+    try:
+        for param in params:
+            cursor = db.cursor(cursor=cursors.DictCursor)
+            cursor.execute('insert into  person value(%s,%s,%s)',
+                           (param['id'], param['name'], param['age']
+                            ))
+    except Exception as e:
+        db.rollback()
+        return False
+    else:
+        db.commit()
+        return True

@@ -1,6 +1,6 @@
 from kepler.db.db import get_mongodb
 
-mon = get_mongodb()
+db = get_mongodb()
 
 # 插入数据
 """
@@ -20,7 +20,7 @@ user1 = {"name": "kepler",
         "info": "kepler",
         "remark": "...for my remark",
         "a":"sdds"}
-mon.insert_one(user1)
+db.user.insert_one(user1)
 # 插入多条数据
 """
 user_l = [{
@@ -57,9 +57,9 @@ mon.insert_many(user_l)
 
 # 查询数据
 
-nm = mon.estimated_document_count()  # 该表数据总数
+nm = db.user.estimated_document_count()  # 该表数据总数
 
-mongo_list = mon.find() # 可增加筛选条件
+mongo_list = db.user.find() # 可增加筛选条件
 for i in mongo_list:
     print(i)
 
