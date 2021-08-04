@@ -46,7 +46,9 @@ def get_h_m_s():
     # 获取当前时分秒
     # tm = '16:13:05'
     tm = datetime.datetime.now().strftime('%X')
+    print(tm)
     return tm
+get_h_m_s()
 
 
 def random_randint():
