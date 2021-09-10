@@ -1,0 +1,23 @@
+tasks:
+  - name: insert
+    databases:
+      - 127.0.0.1
+    amqp:
+      exchange: spider_insert
+      exchange_type: topic
+      topic: spider_insert
+      queue: spider_insert
+      route: spider.insert.
+    func: insert
+    is_rpc: false
+  - name: check_unique
+    databases:
+      - 127.0.0.1
+    amqp:
+      exchange: spider_check
+      exchange_type: topic
+      topic: spider_check
+      queue: spider_check
+      route: spider.check.
+    func: check_unique
+    is_rpc: true
