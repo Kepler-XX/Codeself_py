@@ -5,7 +5,7 @@ from selenium import webdriver
 
 url = "http://liuyan.people.com.cn/"
 
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(executable_path='C:\Program Files\Google\Chrome\Application\chromedriver')
 browser.get(url)
 sleep(3)
 
